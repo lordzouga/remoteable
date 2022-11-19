@@ -1,10 +1,17 @@
-# vue chrome extension example
+# Remoteable
 
-develop chrome extension with vue
+A chrome extension for finding remote jobs. Extension is built with vue js
+
+This project was previously managed with Mercurial on Bitbucket but I moved it to github recently.
+
+NodeJs verion: 8
+npm version: 6.13.4
+
+use `nvm` for easier node installation management.
 
 ## Installation
 
-	$ npm install
+    $ npm install
 
 ## Usage
 
@@ -23,15 +30,13 @@ There are two kinds of entryfiles that create bundles.
 
     $ gulp
 
-
-| Option         | Description                                                                                                                                           |
-|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `--watch`      | Starts a livereload server and watches all assets. <br>To reload the extension on change include `livereload.js` in your bundle.                      |
-| `--production` | Minifies all assets                                                                                                                                   |
-| `--verbose`    | Log additional data to the console.                                                                                                                   |
-| `--vendor`     | Compile the extension for different vendors (chrome, firefox, opera)  Default: chrome                                                                 |
-| `--sourcemaps` | Force the creation of sourcemaps. Default: !production                                                                                                |
-
+| Option         | Description                                                                                                                      |
+| -------------- | -------------------------------------------------------------------------------------------------------------------------------- |
+| `--watch`      | Starts a livereload server and watches all assets. <br>To reload the extension on change include `livereload.js` in your bundle. |
+| `--production` | Minifies all assets                                                                                                              |
+| `--verbose`    | Log additional data to the console.                                                                                              |
+| `--vendor`     | Compile the extension for different vendors (chrome, firefox, opera) Default: chrome                                             |
+| `--sourcemaps` | Force the creation of sourcemaps. Default: !production                                                                           |
 
 ### pack
 
@@ -44,7 +49,6 @@ Zips your `dist` directory and saves it in the `packages` directory.
 Increments version number of `manifest.json` and `package.json`,
 commits the change to git and adds a git tag.
 
-
     $ gulp patch      // => 0.0.X
 
 or
@@ -55,14 +59,12 @@ or
 
     $ gulp release    // => X.0.0
 
-
 ## Globals
 
 The build tool also defines a variable named `ENV` in your scripts. It will be set to `development` unless you use the `--production` option.
 
-
 **Example:** `./app/background.js`
 
-	if(ENV === 'development'){
-		console.log('We are in development mode!');
-	}
+    if(ENV === 'development'){
+    	console.log('We are in development mode!');
+    }
