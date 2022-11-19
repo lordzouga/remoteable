@@ -2,6 +2,8 @@
 
 A chrome extension for finding remote jobs. Extension is built with vue js
 
+Install here: https://chrome.google.com/webstore/detail/remoteable/badejnndoablclhffafkgeggfiepmjin
+
 This project was previously managed with Mercurial on Bitbucket but I moved it to github recently.
 
 NodeJs verion: 8
